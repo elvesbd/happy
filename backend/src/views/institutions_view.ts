@@ -12,6 +12,7 @@ export default {
       instructions: institution.instructions,
       opening_hours: institution.opening_hours,
       open_on_weekends: institution.open_on_weekends,
+      whatsapp: institution.whatsapp, 
       images: imagesView.renderMany(institution.images)
     };
   },

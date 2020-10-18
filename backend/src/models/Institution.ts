@@ -27,6 +27,9 @@ export default class Institution {
   @Column()
   open_on_weekends: boolean;
 
+  @Column()
+  whatsapp: number;
+
   @OneToMany(() => Image, image => image.institution, {
     cascade: ['insert', 'update']
   })

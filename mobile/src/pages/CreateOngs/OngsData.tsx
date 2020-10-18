@@ -18,6 +18,7 @@ export default function OngsData() {
   const [about, setAbout] = useState('');
   const [instructions, setInstructions] = useState('');
   const [opening_hours, setOpening_hours] = useState('');
+  const [whatsapp, setWhatsapp] = useState('');
   const [open_on_weekends, setOpenOnWeekends] = useState(true);
   const [images, setImages] = useState<string[]>([]);
 
@@ -36,6 +37,7 @@ export default function OngsData() {
     data.append('longitude', String(longitude));
     data.append('instructions', instructions);
     data.append('opening_hours', opening_hours);
+    data.append('whatsapp', whatsapp);
     data.append('open_on_weekends', String(open_on_weekends));
 
     images.forEach((image, index) => {
@@ -94,6 +96,8 @@ export default function OngsData() {
       <Text style={styles.label}>Whatsapp</Text>
       <TextInput
         style={styles.input}
+        value={whatsapp}
+        onChangeText={setWhatsapp}
       />
 
       <Text style={styles.label}>Fotos</Text>

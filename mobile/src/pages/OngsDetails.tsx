@@ -20,6 +20,7 @@ interface Ong {
   about: number;
   instructions: string;
   opening_hours: string;
+  whatsapp: number;
   open_on_weekends: boolean;
   images : Array<{
     id: number;
@@ -49,6 +50,10 @@ export default function OngsDetails() {
 
   function handleOpenGoogleMaps() {
     Linking.openURL(`https://www.google.com/maps/dir/?api=1&destination=${ong?.latitude},${ong?.longitude}`)
+  }
+
+  function handleLinkWhatsapp() {
+    Linking.openURL(`https://api.whatsapp.com/send?phone=55${ong?.whatsapp}`)
   }
 
   return (
@@ -118,7 +123,7 @@ export default function OngsDetails() {
           )}
         </View>
 
-        <RectButton style={styles.contactButton} onPress={() => {}}>
+        <RectButton style={styles.contactButton} onPress={handleLinkWhatsapp}>
           <FontAwesome name="whatsapp" size={24} color="#FFF" />
           <Text style={styles.contactButtonText}>Entrar em contato</Text>
         </RectButton>

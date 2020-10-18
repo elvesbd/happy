@@ -45,6 +45,10 @@ export class createInstitution1602635884396 implements MigrationInterface {
           name: 'open_on_weekends',
           type: 'boolean',
           default: false
+        },
+        {
+          name: 'whatsapp',
+          type: 'number',
         }
       ],
     }));

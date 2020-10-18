@@ -33,7 +33,8 @@ export default {
          about,
           instructions,
            opening_hours,
-            open_on_weekends
+            whatsapp,
+             open_on_weekends
     } = request.body;
   
     const institutionsRepository = getRepository(Institution);
@@ -51,8 +52,9 @@ export default {
          about,
           instructions,
            opening_hours,
-            open_on_weekends: open_on_weekends === 'true',
-             images
+            whatsapp,
+             open_on_weekends: open_on_weekends === 'true',
+              images
     };
 
     const schema = Yup.object().shape({
@@ -62,6 +64,7 @@ export default {
       about: Yup.string().required().max(300),
       instructions: Yup.string().required().max(300),
       opening_hours: Yup.string().required(),
+      whatsapp: Yup.number().required(),
       open_on_weekends: Yup.boolean().required(),
       images: Yup.array(
         Yup.object().shape({
