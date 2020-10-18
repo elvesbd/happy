@@ -1,0 +1,11 @@
+node_modules
+
+{
+	"name": "Seed escola de surf",
+	"latitude": -3.8100744,
+	"longitude": -38.5357642,
+	"about": "Sobre a instituição",
+	"instructions": "Venha visitar",
+	"opening_hours": "Das 8h até 18h",
+	"open_on_weekends": true
+}
